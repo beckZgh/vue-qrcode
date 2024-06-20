@@ -27,7 +27,7 @@ jobs:
           cache: pnpm
       - name: Install and Build
         run: |
-          pnpm install
+          pnpm install --no-frozen-lockfile
           pnpm docs:build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.2
