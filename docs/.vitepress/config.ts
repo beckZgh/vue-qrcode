@@ -4,6 +4,8 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
     title: "VueQrcode",
     description: "二维码组件",
+    base: process.env.NODE_ENV === 'production' ? '/vue-qrcode/' : undefined,
+    lastUpdated: true,
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         nav: [
