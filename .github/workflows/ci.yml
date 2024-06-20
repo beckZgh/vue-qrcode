@@ -1,38 +1,36 @@
-name: Deploy To Github pages
+name: Deploy To Github Pages
+
 on:
   push:
     branches:
       - master
 
-env:
-  NODE_VERSION: lts/*
-
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          persist-credentials: false
+        uses: actions/checkout@v2
+
       - name: Install pnpm
         uses: pnpm/action-setup@v2
-        with:
-          version: 8.x
-      - name: Set node version to LTS
+
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ env.NODE_VERSION }}
-          registry-url: https://registry.npmjs.org/
+          node-version: 16
           cache: pnpm
-      - name: Install and Build
-        run: |
-          pnpm install --no-frozen-lockfile
-          pnpm docs:build
+
+      - name: Install deps
+        run: pnpm install
+
+      - name: Build
+        run: pnpm docs:build
+
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4.2.2
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          branch: gh-pages
-          folder: ./docs/.vitepress/dist
+          deploy_key: ${{ secrets.ACTION_SECRET }}
+          publish_dir: docs/.vitepress/dist
