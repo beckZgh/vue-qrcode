@@ -19,6 +19,10 @@ const qrcode_value = ref('1234567890')
 </script>
 
 <template>
+    <!-- 默认使用 -->
     <VueQrcode :value="qrcode_value" :width="200" />
+
+    <!-- 设置深色模块颜色 -->
+    <VueQrcode value="1234567890" :width="200" colorDark="#a64830" />
 </template>
 ```
