@@ -1,0 +1,41 @@
+{
+    "name": "@sumdoo/vue-qrcode",
+    "version": "0.0.1",
+    "description": "vue3 二维码图形组件",
+    "type": "module",
+    "main": "dist/vue-qrcode.umd.cjs",
+    "module": "dist/vue-qrcode.js",
+    "files": [
+        "dist",
+        "LICENSE",
+        "README.md",
+        "package.json"
+    ],
+    "author": {
+        "name": "朱国华",
+        "email": "2223969110@qq.com"
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "vue-tsc && vite build",
+        "preview": "vite preview",
+        "docs:dev": "vitepress dev docs",
+        "docs:build": "vitepress build docs",
+        "docs:preview": "vitepress preview docs"
+    },
+    "dependencies": {
+        "qrcode": "^1.5.3",
+        "vue": "^3.4.21"
+    },
+    "devDependencies": {
+        "@antfu/eslint-config": "^2.21.1",
+        "@types/node": "^20.14.6",
+        "@types/qrcode": "^1.5.5",
+        "@vitejs/plugin-vue": "^5.0.4",
+        "eslint": "^9.5.0",
+        "typescript": "^5.2.2",
+        "vite": "^5.2.0",
+        "vitepress": "^1.2.3",
+        "vue-tsc": "^2.0.6"
+    }
+}
