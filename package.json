@@ -3,6 +3,7 @@
     "version": "0.0.1",
     "description": "vue3 二维码图形组件",
     "type": "module",
+    "packageManager": "pnpm@7.6.0",
     "main": "dist/vue-qrcode.umd.cjs",
     "module": "dist/vue-qrcode.js",
     "files": [
