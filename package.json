@@ -4,8 +4,25 @@
     "description": "vue3 二维码图形组件",
     "type": "module",
     "packageManager": "pnpm@7.6.0",
-    "main": "dist/vue-qrcode.umd.cjs",
-    "module": "dist/vue-qrcode.js",
+    "scripts": {
+        "dev": "vite",
+        "build": "vue-tsc && vite build",
+        "preview": "vite preview",
+        "docs:dev": "vitepress dev docs",
+        "docs:build": "vitepress build docs",
+        "docs:preview": "vitepress preview docs"
+    },
+    "types": "./dist/index.d.ts",
+    "main": "./dist/vue-qrcode.umd.cjs",
+    "module": "./dist/vue-qrcode.js",
+    "unpkg": "./dist/vue-draggable-plus.iife.js",
+    "jsdelivr": "./dist/vue-draggable-plus.iife.js",
+    "homepage": "https://beckzgh.github.io/vue-qrcode/",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/beckZgh/vue-qrcode"
+    },
+    "sideEffects": false,
     "files": [
         "dist",
         "LICENSE",
@@ -16,17 +33,15 @@
         "name": "朱国华",
         "email": "2223969110@qq.com"
     },
-    "scripts": {
-        "dev": "vite",
-        "build": "vue-tsc && vite build",
-        "preview": "vite preview",
-        "docs:dev": "vitepress dev docs",
-        "docs:build": "vitepress build docs",
-        "docs:preview": "vitepress preview docs"
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
     },
     "dependencies": {
-        "qrcode": "^1.5.3",
-        "vue": "^3.4.21"
+        "@types/qrcode": "^1.5.5"
+    },
+    "peerDependencies": {
+        "qrcode": "^1.5.3"
     },
     "devDependencies": {
         "@antfu/eslint-config": "^2.21.1",
@@ -34,9 +49,12 @@
         "@types/qrcode": "^1.5.5",
         "@vitejs/plugin-vue": "^5.0.4",
         "eslint": "^9.5.0",
+        "qrcode": "^1.5.3",
         "typescript": "^5.2.2",
         "vite": "^5.2.0",
+        "vite-plugin-dts": "^3.9.1",
         "vitepress": "^1.2.3",
+        "vue": "^3.4.21",
         "vue-tsc": "^2.0.6"
     }
 }
