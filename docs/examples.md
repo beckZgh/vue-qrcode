@@ -13,7 +13,6 @@
 
 <VueQrcode value="1234567890" :width="150"  />
 
-
 ## 自定义深色颜色
 
 通过 `colorDark: string` 可自定义二维码深色颜色 (必须是十六进制格式)
