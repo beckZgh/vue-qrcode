@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a1 as t}from"./chunks/framework.C7pWHXZ0.js";const c=JSON.parse('{"title":"VueQrcode","description":"","frontmatter":{},"headers":[],"relativePath":"guide.md","filePath":"guide.md"}'),h={name:"guide.md"},n=t("",6),e=[n];function l(p,k,r,d,E,o){return a(),i("div",null,e)}const y=s(h,[["render",l]]);export{c as __pageData,y as default};
