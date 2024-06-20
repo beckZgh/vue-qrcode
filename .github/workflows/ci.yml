@@ -2,7 +2,7 @@ name: Deploy To Github pages
 on:
   push:
     branches:
-      - main
+      - master
 
 env:
   NODE_VERSION: lts/*
