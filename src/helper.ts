@@ -1,9 +1,9 @@
-import type { ComponentProps } from './component'
+import type { QrcodeProps } from './component'
 
 import Qrcode from 'qrcode'
 import { getQrcodeOptions } from './utils'
 
-export async function genQrcodeImage(value: string, options?: Omit<ComponentProps, 'tag' | 'value'>) {
+export async function genQrcodeImage(value: string, options?: Omit<QrcodeProps, 'tag' | 'value'>) {
     try {
         if (!value) return null
         return await Qrcode.toDataURL(value, getQrcodeOptions({

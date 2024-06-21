@@ -1,4 +1,5 @@
 import type { App } from 'vue'
+
 import VueQrcode from './component.vue'
 
 export * from './component'
@@ -8,4 +9,5 @@ const install = (app: App) => {
     app.component('VueQrcode', VueQrcode)
 }
 
+export { VueQrcode }
 export default { install }

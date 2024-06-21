@@ -1,12 +1,12 @@
 <script lang="ts">
 import { defineComponent, ref, onMounted, watch } from 'vue'
-import { componentProps   } from './component'
+import { qrcodeProps      } from './component'
 import { getQrcodeOptions } from './utils'
 import QRCode from 'qrcode'
 
 export default defineComponent({
     name: 'VueQrcode',
-    props: componentProps,
+    props: qrcodeProps,
     emits: ['done', 'error'],
     setup(props, { emit }) {
         const container_ref = ref<HTMLDivElement>()

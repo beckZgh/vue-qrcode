@@ -1,6 +1,6 @@
 {
     "name": "@sumdoo/vue-qrcode",
-    "version": "0.0.1",
+    "version": "1.0.1",
     "description": "vue3 二维码图形组件",
     "type": "module",
     "packageManager": "pnpm@7.6.0",

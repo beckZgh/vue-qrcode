@@ -1,7 +1,7 @@
 import type { QRCodeErrorCorrectionLevel, QRCodeMaskPattern } from 'qrcode'
 import type { PropType, ExtractPublicPropTypes } from 'vue'
 
-export const componentProps = {
+export const qrcodeProps = {
     tag: {
         type   : String as PropType<'canvas' | 'svg' | 'img'>,
         default: 'svg',
@@ -22,4 +22,4 @@ export const componentProps = {
     toImageOptions      : { type: Object as PropType<{ type: string, quality: number }> },
 }
 
-export type ComponentProps = ExtractPublicPropTypes<typeof componentProps>
+export type QrcodeProps = ExtractPublicPropTypes<typeof qrcodeProps>

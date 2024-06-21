@@ -1,5 +1,5 @@
 import type { QRCodeRenderersOptions } from 'qrcode'
-import type { ComponentProps } from './component'
+import type { QrcodeProps } from './component'
 
 // 对于内容少的QrCode，增大容错率
 export function getErrorCorrectionLevel(content: string = '') {
@@ -12,7 +12,7 @@ export function getErrorCorrectionLevel(content: string = '') {
     }
 }
 
-export function getQrcodeOptions(options: ComponentProps): Partial<QRCodeRenderersOptions> {
+export function getQrcodeOptions(options: QrcodeProps): Partial<QRCodeRenderersOptions> {
     let error_lever = options.errorCorrectionLevel
     if ( !error_lever )  {
         error_lever = getErrorCorrectionLevel(options.value)
